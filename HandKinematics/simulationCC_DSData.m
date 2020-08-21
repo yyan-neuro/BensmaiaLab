@@ -50,9 +50,6 @@ for i = 1:size(PCM,2)
 
         %Select same-object correlation coefficients
         
-        %cc_sao_temp = tril(trialMat_cc(tNo:tNo+4,tNo:tNo+4),-1);
-        %cc_sao_temp = reshape(cc_sao_temp,[numel(cc_sao_temp),1]);
-        %cc_sao_temp = nonzeros(cc_sao_temp);
         
         cc_sao_temp = trialMat_cc(tNo:tNo+4,tNo:tNo+4);
         
@@ -81,8 +78,6 @@ for i = 1:size(PCM,2)
 end
 
 
-%cc_sao_mat = round(cc_sao_mat,4);
-%cc_dio_mat = round(cc_dio_mat,4);
 
 
 
