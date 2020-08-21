@@ -7,10 +7,10 @@ tmat_verify = []; vmat_verify = [];
 numObj = length(unique(ds_ind(:,1))); 
 
 if(RO)
-    %for RO data
+    %for raw data
     ind_minus = precon * 100;
 else
-    %for actual DS data
+    %for down-sampled data
     ind_minus = precon*20;
 end
 
