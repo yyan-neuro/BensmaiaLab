@@ -130,7 +130,6 @@ for iter_i = 1:Niter
 
                 acc_vec = [];
                 for c_rep = 1:5
-                    %changed here
                     acc_temp = ClassAccuracy_DS_PC(graspMat_noisy,graspMat_ind,0,true);
                     acc_vec = [acc_vec;acc_temp];
                 end
