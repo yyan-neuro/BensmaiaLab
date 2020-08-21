@@ -2,6 +2,7 @@
 
 
 Eval_isomap_loaf = {}; acc_isomap_loaf = {};
+%Defines how many landmarks to use when performing Isomap. "inf" uses all data points and no specific landmarks. We used the no-landmark setting in our Isomap analysis. 
 landmark_list = [inf];
 
 
@@ -62,25 +63,10 @@ for LM_ind = 1:length(landmark_list)
 
     end
     
+    %Store the eigenvalues and classification accuracies of Isomap
     acc_isomap_loaf{LM_ind} = acc_mat_isomap;
     Eval_isomap_loaf{LM_ind} = Eval_isomap;
     
 end
 
-%}
-
-%{
-acc_mat_pca = [];
-for i = 1:8
-
-    graspMat = MatList_DS{i};
-    graspMat_ind = MatIndList_DS{i};
-    
-    for rep = 1:5
-        acc_temp2 = ClassAccuracy_DS_PC(graspMat,graspMat_ind,0.1,false);
-        acc_mat_pca = [acc_mat_pca;acc_temp2];
-    end
-    
-end
-%}
 
