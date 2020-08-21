@@ -152,7 +152,3 @@ for iter_i = 1:Niter
 
 end
 
-
-%New Accuracy to match: 0.9460
-%My Noise: cNoiseRatio = 0.15. Matching Accuracy: 0.9543
-%Reviewer's Noise: cNoiseRatio = 0.25 Matching Accuracy: 0.9539
