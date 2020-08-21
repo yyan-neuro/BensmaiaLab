@@ -4,5 +4,5 @@ Raw data and Core Matlab functions for the paper titled "Unexpected Complexity i
 Instructions:
 1. Download Non-linear PCA toobox (http://www.nlpca.org/matlab.html) and Isomap toolbox (https://web.mit.edu/cocosci/isomap/isomap.html)
 2. Load "Grasp Data.mat".
-3. Run NLPCA_final.m for training NLPCA on the grasp data, then run ClassAccuracy_DS_NLPCA.m for classification analysis using the NLPCA components. Run eigenvalues_pca_isomap2.m for performing PCA and Isomap on the grasp data.
+3. Run NLPCA_final.m for training NLPCA on the grasp data, then run ClassAccuracy_DS_NLPCA.m for classification analysis using the NLPCA components. Run eigenvalues_pca_isomap2.m for performing PCA and Isomap on the grasp data and the associated classification analysis.
 4. Run SimulationRealCA2.m and SimulationRealCC2.m for the conditional noise analysis.
