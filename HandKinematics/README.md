@@ -10,4 +10,4 @@ Instructions:
 Notes on data:
 
 1. The grasp and ASL data here only contain the movement segment from "finger starts moving" to "100ms before contact" in each trial. We performed our analysis (dimensionality reduction, classification etc.) on these segments because we want to isolate the volitional movements not affected by object contours. As such, the "precon" argument in the classifciation functions are all set to 0, as the "0" here is exactly 100ms before contact. 
-2. Grasp data organization: each cell is the combined kinematics matrix of a subject. Each row is an observation and each column is a distinct joint angle. The index matrix (from MatIndList) provides detailed information of the kinematics matrix. It has three columns: 1st column: object index. 2nd column: trial index. 3rd column: timestamp in that trial. 
+2. Grasp data organization: each cell is the combined kinematics matrix of a subject. Each row is an observation and each column is a distinct joint angle. The index matrix (from MatIndList) provides detailed information of the kinematics matrix: 1st column: object index. 2nd column: trial index. 3rd column: timestamp in that trial. 
