@@ -1,2 +1,2 @@
 # BensmaiaLab
-Public Repository for my work in Bensmaia lab at the University of Chicago.
+Public Repository for Bensmaia lab at the University of Chicago.
