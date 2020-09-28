@@ -1,5 +1,11 @@
 function [compCount,simVec] = PCSpaceSim_Array(giantMatArray,giantPCArray)
-
+% Calculate the subspace similarity between every pair of movement matrices in giantMatArrray
+% Input:
+%   giantMatArray: cell array of movement data
+%   giantPCArray: cell array of PCs in the same order as giantMatArray
+% Output: 
+%   compCount: number of of comparisons made
+%   simVec: subspace similarity vector. 
 caseNo = numel(giantMatArray);
 compCount = 0;
 simVec = [];
