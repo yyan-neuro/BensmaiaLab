@@ -4,7 +4,7 @@ function acc_vec = ClassAccuracy_DS_NLPCA(graspMat,ds_ind,net,precon,fw)
 %   graspMat: movement data matrix. time x joint angle
 %   ds_ind: movement data information.
 %   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classificaiton.
-%   fw: boolean argument. 
+%   fw: boolean argument. If true, NLPCs are removed from the end (removed in asecending order of variance explained). Otherwise NLPCs are removed from the beginning. 
 % Output: 
 %   acc_vec: classification performance on the test data
 
