@@ -1,5 +1,11 @@
 function simVec = PCSpaceSim_Num(PCM1,PCM2,dataM1,dataM2,method)
-
+% Calculate the subspace similarity between two data matrices. 
+% Input:
+%   PCM1, PCM2: PCs of dataM1 and dataM2
+%   dataM1, dataM2: movement data matrices
+%   method: method for calculating the subspace similarity
+% Output: 
+%   simVec: subspace similarity vector. 
 
 simVec = zeros(1,size(PCM1,2));
 
