@@ -1,4 +1,12 @@
 function acc_vec = ClassAccuracy_DS_NLPCA(graspMat,ds_ind,net,precon,fw)
+% Calculate classification performance with progressively fewer NLPCA dimensions
+% Input:
+%   graspMat: movement data matrix. time x joint angle
+%   ds_ind: movement data information.
+%   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classificaiton.
+%   fw: boolean argument. 
+% Output: 
+%   acc_vec: classification performance on the test data
 
 acc_vec = [];  dimNum = 29;
 
