@@ -27,10 +27,5 @@ for i = 0:dimNum-1
     acc_vec = [acc_vec,acc];
     
 end
-%{
-plot(1:length(acc_vec),acc_vec,'-o');
-xlabel('PC Number');
-ylabel('Accuracy / percent');
-ylim([0,1]);
-%}
+
 end
