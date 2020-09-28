@@ -1,4 +1,10 @@
 function data_pc = ReconArbPC(data,PCM)
+% Reconstruct the data with an arbitrary set of PCs. 
+% Input:
+%   data: original data
+%   PCM: a set of PCs. Each column is one PC
+% Output: 
+%   data_pc: reconstructed data
 
 %Demean the data
 data_mean = mean(data);
