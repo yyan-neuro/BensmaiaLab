@@ -1,6 +1,6 @@
 function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y)
 
-% Calculate classification performance with progressively smaller dimensions
+% Calculate classification performance with progressively fewer Isomap dimensions
 % Input:
 %   graspMat: movement data matrix. time x joint angle
 %   ds_ind: movement data information.
