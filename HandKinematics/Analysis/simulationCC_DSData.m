@@ -1,5 +1,11 @@
 function [cc_sao_mat,cc_dio_mat] = simulationCC_DSData(graspMat,graspMat_ind)
-
+% Calculate the correlation coefficients between PC scores of trials from the same grasped object or different grasped objects. 
+% Input:
+%   graspMat: movement data
+%   graspMat_ind: data description
+% Output: 
+%   cc_sao_mat: Correlation coefficients between PC scores of trials from the same grasped object
+%   cc_dio_mat; Correlation coefficients between PC scores of trials from different grasped objects. 
 PCM = pca(graspMat);
 objNo = numel(unique(graspMat_ind(:,1)));
 dataNo = size(graspMat,1);
