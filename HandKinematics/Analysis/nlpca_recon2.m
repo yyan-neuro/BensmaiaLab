@@ -1,4 +1,13 @@
 function data_recon = nlpca_recon2(data,net,num,format,forward)
+% Reconstruct data using NLPCA dimensions
+% Input:
+%   data: original data
+%   net: trained NLPCA autoencoder
+%   num: cutoff dimensions
+%   format: boolean argument. Determine if we need to transpose the data. NLPCA package takes data in the form of attribute x time.
+%   forward: boolean argument. Determine if we remove NLPCA dimensions from the end (removed in ascending order of variance).
+% Output: 
+%   data_recon: reconstructed data. 
 
 
 if(format)
