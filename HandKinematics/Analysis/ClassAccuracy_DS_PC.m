@@ -1,4 +1,4 @@
-function acc_vec = ClassAccuracy_DS_PC(fullMat,ds_ind,precon,RO)
+function acc_vec = ClassAccuracy_DS_PC(fullMat,ds_ind,precon,RO,vtrial)
 % Calculate classification performance with progressively fewer PCA dimensions
 % Input:
 %   graspMat: movement data matrix. time x joint angle
@@ -15,7 +15,7 @@ for i = 1:PCNo
     
     
     
-    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,fullMat,precon,RO);
+    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,fullMat,precon,RO,vtrial);
     
     tmat_pc = tmat(:,1:end-1) * PCM(:,end-i+1:end);
     vmat_pc = vmat(:,1:end-1) * PCM(:,end-i+1:end);
