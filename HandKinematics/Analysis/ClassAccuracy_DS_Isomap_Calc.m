@@ -1,4 +1,4 @@
-function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y,vtrial)
+function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y)
 
 % Calculate classification performance with progressively fewer Isomap dimensions
 % Input:
@@ -6,7 +6,6 @@ function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y,vtrial)
 %   ds_ind: movement data information.
 %   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classificaiton.
 %   Y: Isomap scores.
-%   vtrial: index of the test trial (of each object)
 % Output: 
 %   acc_vec: classification performance on the test data
 
@@ -18,7 +17,7 @@ graspMat_Isomap = Y.coords{29}; graspMat_Isomap = graspMat_Isomap.';
 for i = 1:PCNo
     
     
-    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat_Isomap,precon,false,vtrial);
+    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat_Isomap,precon,false);
     
 
     
