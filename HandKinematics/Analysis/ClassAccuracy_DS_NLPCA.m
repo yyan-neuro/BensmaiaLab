@@ -1,4 +1,4 @@
-function acc_vec = ClassAccuracy_DS_NLPCA(graspMat,ds_ind,net,precon,fw)
+function acc_vec = ClassAccuracy_DS_NLPCA(graspMat,ds_ind,net,precon,fw,vtrial)
 % Calculate classification performance with progressively fewer NLPCA dimensions
 % Input:
 %   graspMat: movement data matrix. time x joint angle
@@ -12,7 +12,7 @@ acc_vec = [];  dimNum = 29;
 
 for i = 0:dimNum-1
     
-    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat,precon,false);
+    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat,precon,false,vtrial);
     
     if(fw)
         tmat_pc = nlpca_recon2(tmat(:,1:end-1),net,i,true,true); 
