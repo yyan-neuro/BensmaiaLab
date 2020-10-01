@@ -1,10 +1,11 @@
-function [tmat,vmat,tmat_verify,vmat_verify] = getClassMat_ds(ds_ind,ds_mat,precon,RO)
+function [tmat,vmat,tmat_verify,vmat_verify] = getClassMat_ds(ds_ind,ds_mat,precon,RO,vtrial)
 % Get randomized training and testing data for classification
 % Input:
 %   ds_ind: movement data description
 %   ds_mat: movement data matrix
 %   pre_con: number of seconds before contact. Determines the timestamp of the hand postures used in classification. 
 %   RO: boolean argument. True indicates no down-sampling has taken place. 
+%   vtrial: index of the test trial (of each object)
 % Output: 
 %   tmat, vmat: training data and testing data. 
 %   tmat_verify and vmat_verify: the data description associated with the training data and testing data. Used for debugging purposes. 
@@ -26,12 +27,12 @@ end
 
 
 i = 1;
-object = 1; vtrial = randi(5);
+object = 1; 
 while (i<=size(ds_ind,1)-ind_minus)
     
     if(ds_ind(i,1)~=object)        
         object = ds_ind(i,1);
-        vtrial = randi(5);
+
     end
     
     
