@@ -1,11 +1,10 @@
-function acc_vec = ClassAccuracy_DS_PC(fullMat,ds_ind,precon,RO,vtrial)
+function acc_vec = ClassAccuracy_DS_PC(fullMat,ds_ind,precon,RO)
 % Calculate classification performance with progressively fewer PCA dimensions
 % Input:
 %   graspMat: movement data matrix. time x joint angle
 %   ds_ind: movement data information.
 %   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classification.
 %   RO: boolean argument. True indicates no down-sampling. 
-%   vtrial: index of the test trial (of each object)
 % Output: 
 %   acc_vec: classification performance on the test data
 acc_vec = []; PCNo = 29;
@@ -16,7 +15,7 @@ for i = 1:PCNo
     
     
     
-    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,fullMat,precon,RO,vtrial);
+    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,fullMat,precon,RO);
     
     tmat_pc = tmat(:,1:end-1) * PCM(:,end-i+1:end);
     vmat_pc = vmat(:,1:end-1) * PCM(:,end-i+1:end);
