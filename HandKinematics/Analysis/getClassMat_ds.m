@@ -27,12 +27,12 @@ end
 
 
 i = 1;
-object = 1; 
+object = 1; vtrial = randi(5);
 while (i<=size(ds_ind,1)-ind_minus)
     
     if(ds_ind(i,1)~=object)        
         object = ds_ind(i,1);
-
+        vtrial = randi(5);
     end
     
     
