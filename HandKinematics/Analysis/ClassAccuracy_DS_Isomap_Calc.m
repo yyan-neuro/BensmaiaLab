@@ -1,4 +1,4 @@
-function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y)
+function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y,vtrial)
 
 % Calculate classification performance with progressively fewer Isomap dimensions
 % Input:
@@ -17,7 +17,7 @@ graspMat_Isomap = Y.coords{29}; graspMat_Isomap = graspMat_Isomap.';
 for i = 1:PCNo
     
     
-    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat_Isomap,precon,false);
+    [tmat,vmat,~,~] = getClassMat_ds(ds_ind,graspMat_Isomap,precon,false,vtrial);
     
 
     
