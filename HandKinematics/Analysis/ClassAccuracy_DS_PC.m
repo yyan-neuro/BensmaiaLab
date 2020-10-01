@@ -5,6 +5,7 @@ function acc_vec = ClassAccuracy_DS_PC(fullMat,ds_ind,precon,RO,vtrial)
 %   ds_ind: movement data information.
 %   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classificaiton.
 %   RO: boolean argument. True indicates no down-sampling. 
+%   vtrial: index of the test trial (of each object)
 % Output: 
 %   acc_vec: classification performance on the test data
 acc_vec = []; PCNo = 29;
