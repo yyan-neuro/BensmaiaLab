@@ -5,6 +5,7 @@ function acc_vec = ClassAccuracy_DS_Isomap_Calc(graspMat,ds_ind,precon,Y)
 %   graspMat: movement data matrix. time x joint angle
 %   ds_ind: movement data information.
 %   precon: number of seconds before contact. Determine the time stamp of the hand posture used in classificaiton.
+%   Y: Isomap scores.
 % Output: 
 %   acc_vec: classification performance on the test data
 
